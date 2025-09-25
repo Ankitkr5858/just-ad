@@ -1,0 +1,365 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 0.375rem;
+}
+
+.scrollbar-track-gray-100::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --app-muted: rgba(161, 163, 171, 1);
+  --app-primary: rgba(107, 19, 227, 1);
+  --body-b-10-10-400-font-family: "Inter", Helvetica;
+  --body-b-10-10-400-font-size: 10px;
+  --body-b-10-10-400-font-style: normal;
+  --body-b-10-10-400-font-weight: 400;
+  --body-b-10-10-400-letter-spacing: -0.3px;
+  --body-b-10-10-400-line-height: 10px;
+  --body-b-11-12-400-font-family: "Inter", Helvetica;
+  --body-b-11-12-400-font-size: 11px;
+  --body-b-11-12-400-font-style: normal;
+  --body-b-11-12-400-font-weight: 400;
+  --body-b-11-12-400-letter-spacing: 0px;
+  --body-b-11-12-400-line-height: 12px;
+  --body-b-11-12-500-font-family: "Inter", Helvetica;
+  --body-b-11-12-500-font-size: 11px;
+  --body-b-11-12-500-font-style: normal;
+  --body-b-11-12-500-font-weight: 500;
+  --body-b-11-12-500-letter-spacing: 0px;
+  --body-b-11-12-500-line-height: 12px;
+  --body-b-12-12-400-font-family: "Inter", Helvetica;
+  --body-b-12-12-400-font-size: 12px;
+  --body-b-12-12-400-font-style: normal;
+  --body-b-12-12-400-font-weight: 400;
+  --body-b-12-12-400-letter-spacing: 0px;
+  --body-b-12-12-400-line-height: 12px;
+  --body-b-12-12-500-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-12-12-500-font-size: 12px;
+  --body-b-12-12-500-font-style: normal;
+  --body-b-12-12-500-font-weight: 500;
+  --body-b-12-12-500-letter-spacing: 0px;
+  --body-b-12-12-500-line-height: 12px;
+  --body-b-13-14-400-font-family: "Inter", Helvetica;
+  --body-b-13-14-400-font-size: 13px;
+  --body-b-13-14-400-font-style: normal;
+  --body-b-13-14-400-font-weight: 400;
+  --body-b-13-14-400-letter-spacing: 0px;
+  --body-b-13-14-400-line-height: 14px;
+  --body-b-13-14-500-font-family: "Inter", Helvetica;
+  --body-b-13-14-500-font-size: 13px;
+  --body-b-13-14-500-font-style: normal;
+  --body-b-13-14-500-font-weight: 500;
+  --body-b-13-14-500-letter-spacing: -0.13px;
+  --body-b-13-14-500-line-height: 14px;
+  --body-b-13-20-400-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-13-20-400-font-size: 13px;
+  --body-b-13-20-400-font-style: normal;
+  --body-b-13-20-400-font-weight: 400;
+  --body-b-13-20-400-letter-spacing: 0px;
+  --body-b-13-20-400-line-height: 20px;
+  --body-b-14-14-400-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-14-14-400-font-size: 14px;
+  --body-b-14-14-400-font-style: normal;
+  --body-b-14-14-400-font-weight: 400;
+  --body-b-14-14-400-letter-spacing: 0px;
+  --body-b-14-14-400-line-height: 14px;
+  --body-b-14-14-500-font-family: "Inter", Helvetica;
+  --body-b-14-14-500-font-size: 14px;
+  --body-b-14-14-500-font-style: normal;
+  --body-b-14-14-500-font-weight: 500;
+  --body-b-14-14-500-letter-spacing: 0px;
+  --body-b-14-14-500-line-height: 14px;
+  --body-b-14-22-400-font-family: "Inter", Helvetica;
+  --body-b-14-22-400-font-size: 14px;
+  --body-b-14-22-400-font-style: normal;
+  --body-b-14-22-400-font-weight: 400;
+  --body-b-14-22-400-letter-spacing: 0px;
+  --body-b-14-22-400-line-height: 22px;
+  --body-b-14-22-500-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-14-22-500-font-size: 14px;
+  --body-b-14-22-500-font-style: normal;
+  --body-b-14-22-500-font-weight: 500;
+  --body-b-14-22-500-letter-spacing: 0px;
+  --body-b-14-22-500-line-height: 22px;
+  --body-b-15-16-400-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-15-16-400-font-size: 15px;
+  --body-b-15-16-400-font-style: normal;
+  --body-b-15-16-400-font-weight: 400;
+  --body-b-15-16-400-letter-spacing: 0px;
+  --body-b-15-16-400-line-height: 16px;
+  --body-b-15-24-400-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-15-24-400-font-size: 15px;
+  --body-b-15-24-400-font-style: normal;
+  --body-b-15-24-400-font-weight: 400;
+  --body-b-15-24-400-letter-spacing: 0px;
+  --body-b-15-24-400-line-height: 24px;
+  --body-b-16-16-400-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-16-16-400-font-size: 16px;
+  --body-b-16-16-400-font-style: normal;
+  --body-b-16-16-400-font-weight: 400;
+  --body-b-16-16-400-letter-spacing: 0px;
+  --body-b-16-16-400-line-height: 16px;
+  --body-b-16-16-500-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-16-16-500-font-size: 16px;
+  --body-b-16-16-500-font-style: normal;
+  --body-b-16-16-500-font-weight: 500;
+  --body-b-16-16-500-letter-spacing: 0px;
+  --body-b-16-16-500-line-height: 16px;
+  --body-b-16-25-600-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-16-25-600-font-size: 16px;
+  --body-b-16-25-600-font-style: normal;
+  --body-b-16-25-600-font-weight: 600;
+  --body-b-16-25-600-letter-spacing: 0px;
+  --body-b-16-25-600-line-height: 25px;
+  --body-b-18-25-600-font-family: "IBM Plex Sans", Helvetica;
+  --body-b-18-25-600-font-size: 18px;
+  --body-b-18-25-600-font-style: normal;
+  --body-b-18-25-600-font-weight: 600;
+  --body-b-18-25-600-letter-spacing: 0px;
+  --body-b-18-25-600-line-height: 25px;
+  --gray-60: rgba(81, 102, 138, 1);
+  --gray-80: rgba(63, 63, 95, 1);
+  --heading-h-24-24-600-font-family: "Inter", Helvetica;
+  --heading-h-24-24-600-font-size: 24px;
+  --heading-h-24-24-600-font-style: normal;
+  --heading-h-24-24-600-font-weight: 400;
+  --heading-h-24-24-600-letter-spacing: -0.24px;
+  --heading-h-24-24-600-line-height: 24px;
+  --heading-h-26-26-600-font-family: "IBM Plex Sans", Helvetica;
+  --heading-h-26-26-600-font-size: 26px;
+  --heading-h-26-26-600-font-style: normal;
+  --heading-h-26-26-600-font-weight: 600;
+  --heading-h-26-26-600-letter-spacing: -0.52px;
+  --heading-h-26-26-600-line-height: 26px;
+  --heading-h-30-30-600-font-family: "Inter", Helvetica;
+  --heading-h-30-30-600-font-size: 30px;
+  --heading-h-30-30-600-font-style: normal;
+  --heading-h-30-30-600-font-weight: 400;
+  --heading-h-30-30-600-letter-spacing: -0.6px;
+  --heading-h-30-30-600-line-height: 30px;
+  --lightmodedangerdanger: rgba(248, 40, 90, 1);
+  --lightmodegreygrey-200: rgba(241, 241, 244, 1);
+  --lightmodegreygrey-300: rgba(219, 223, 233, 1);
+  --lightmodegreygrey-400: rgba(196, 202, 218, 1);
+  --lightmodegreygrey-500: rgba(153, 161, 183, 1);
+  --lightmodegreygrey-600: rgba(120, 130, 157, 1);
+  --lightmodegreygrey-700: rgba(75, 86, 117, 1);
+  --lightmodegreygrey-800: rgba(37, 47, 74, 1);
+  --lightmodegreygrey-900: rgba(7, 20, 55, 1);
+  --lightmodelightlight: rgba(255, 255, 255, 1);
+  --lightmodeorangeorange: rgba(255, 111, 30, 1);
+  --lightmodesuccesssuccess: rgba(23, 198, 83, 1);
+  --lightmodesuccesssuccess-active: rgba(4, 180, 64, 1);
+  --lightmodesuccesssuccess-clarity-20: rgba(23, 198, 83, 0.2);
+  --lightmodesuccesssuccess-light: rgba(234, 255, 241, 1);
+  --widget-shadow-intence: 0px 10px 14px 0px rgba(15, 42, 81, 0.03);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
